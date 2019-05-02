@@ -19,7 +19,7 @@ CSV.open(ARGV[0] + ".freeagent", "wb") do |output|
 
   CSV.foreach(ARGV[0], encoding: "ISO-8859-15:UTF-8",  col_sep: ",", headers: true) do |input|
     row_count += 1
-    if row_count > 9
+    if row_count > 8
       date        = Date.parse(input[0])
       debit = input[3]
       credit = input[4]
